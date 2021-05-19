@@ -6,7 +6,12 @@ class UserAddForm extends React.Component {
         this.state = {
             name: '',
             email: '',
-            isGoldClient: false
+            isGoldClient: false,
+            salary: '',
+            image: '',
+           
+           
+           
         };
     }
 
@@ -21,37 +26,72 @@ class UserAddForm extends React.Component {
     updateIsGoldClient(event) {
         this.setState({isGoldClient: event.target.checked});
     }
+    updateSalary(event) {
+        this.setState({salary: event.target.value});
+    }
+    
+   
 
     render() {
-        const {name, email, isGoldClient} = this.state;
+        const {name, email, isGoldClient, salary,image} = this.state;
 
         return (
+           
+            
             <form
-                className="user-add-form"
-                onSubmit={(event) => this.props.submitAddForm(event, name, email, isGoldClient)}
-            >
-                <h2>Adauga utilizatori:</h2>
-                <label htmlFor="name">Nume:</label>
-                <input
+                
+                onSubmit={(event) => this.props.submitAddForm(event, name, email, isGoldClient,salary, image)}>
+                
+                <div className="col-12 d-flex flex-wrap align-items-center mx-5 mt-5 mb-5 ">
+                <div className='div-name'>
+                 <label className="labelName " htmlFor="name">Name: </label>
+                 <input className="name"
                     type="text"
-                    name="name"
+                    id="name"
+                    required
                     onChange={(event) => this.updateName(event)}
                 />
-                <label htmlFor="email">Email:</label>
-                <input
+
+                </div>
+                 <div className='div-email'>
+                  <label className="labelEmail" htmlFor="email">Email: </label>
+                  <input
+                  
+                   required
+                    refs="email"
+                    className='email'
                     type="text"
-                    name="email"
+                    id="email"
                     onChange={(event) => this.updateEmail(event)}
-                />
-                <label htmlFor="is-gold-client">Client GOLD</label>
+                  />
+                 </div>
+                
+                <div className="div-salary">
+                <label className="labelSalary" htmlFor="salary"> Salary: </label>
                 <input
+                    required
+                    type="text"
+                    id="salary"
+                    onChange={(event) => this.updateSalary(event)  }
+                />
+                </div>
+
+                <div className="div-client">
+                <label className="labelGoldClient"  htmlFor="is-gold-client"> GOLD Client </label>
+                <input
+                    className="ml-2"
+                    className='is-gold-client'
                     type="checkbox"
-                    name="is-gold-client"
+                    id="is-gold-client"
                     value="true"
                     onChange={(event) => this.updateIsGoldClient(event)}
                 />
-
-                <input type="submit" value="Introdu utilizatorul"/>
+                </div>
+                
+                <input className='submit ' type="submit" value="Submit"/>
+                </div>
+                
+                
             </form>
         )
     }

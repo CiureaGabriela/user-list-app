@@ -1,12 +1,120 @@
-h2 {
-    font-style: italic;
+
+
+ .submit{
+    height:30px;
+    width: 207px;
+    margin-top: 7px;
+    margin-left: 55px; 
+    background-color: grey;
+
+}
+.submit:hover{
+    background-color: white;
+    color: black;
 }
 
-.user-add-form {
-    display: flex;
-    flex-direction: column;
+
+.userButton{
+    margin-left: 7px;
+    margin-top: 15px;
+    margin-right: 10px;
+    height: 30px;
+    width: 70px;
+    background-color: white;
+    color: black;
+}
+.userButton:hover{
+    background-color: black;
+    color: blanchedalmond;
+   
+}
+.postButton{
+    margin-left: 7px;
+    margin-top: 15px;
+    margin-right: 10px;
+    height: 30px;
+    width: 70px;
+    background-color: white;
+    color: black;
+}
+.postButton:hover{
+    background-color: black;
+    color: blanchedalmond;
+   
+}
+.deleteButton{
+    margin-left: 7px;
+    margin-top: 15px;
+    margin-right: 10px;
+    height: 30px;
+    width: 100px;
+    background-color: white;
+    color: black;
+} 
+ .deleteButton:hover{
+    background-color: black;
+    color: blanchedalmond;
 }
 
-.user-add-form input {
-    max-width: 50%;
+.container {
+    font-family: 'Roboto', sans-serif;
+    size: 20px;
+      
+}
+
+.deleteButton{
+    margin-left: 27px;
+}
+.labelName{
+    margin-left: 21px;
+    margin-right: 5px;
+}
+.labelEmail{
+    margin-left: 25px ;
+    margin-right: 5px;
+}
+.labelGoldClient{
+    margin-left:17px ;
+    margin-right: 10px;
+}
+.labelSalary{
+    margin-left:20px ;
+    margin-right: 5px;
+}
+.submit{
+    margin-top: 0px;
+    margin-bottom: 5px;
+    margin-left:15px ;
+    
+}
+.userButton{
+    margin-left: 100px;
+}
+.postButton{
+    margin-left: 100px;  
+}
+.backgroundColorLabel{
+    margin-left: 50px;
+    margin-right: 5px;
+
+}
+.textColorLabel{
+    margin-left: 50px;
+    margin-right: 5px;
+
+}
+.divTitle{
+    margin-top: 15px;
+}
+.title{
+    font-family: 'Roboto', sans-serif;
+    size: 20px;
+    
+}
+.userListTitle{
+    font-family: 'Roboto', sans-serif;
+    size: 20px;
+}
+.columns{
+    column-gap: 15px;
 }
